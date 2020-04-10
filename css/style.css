@@ -1,0 +1,831 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 44px;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.container {
+  max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.button {
+  padding: 8px 16px;
+
+  font-size: 16px;
+  line-height: 24px;
+	color: #595959;
+	background-color: #ffffff;
+
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+}
+
+.button--blue {
+	margin-right: 18px;
+	color: #ffffff;
+	background-color: #1890ff;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  align-items: center;
+}
+
+.input {
+  font-size: 16px;
+  line-height: 24px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.input-address-wrapper {
+  position: relative;
+
+	display: flex;
+	flex: 0.8;
+  align-items: center;
+}
+
+.input-address {
+	width: 100%;
+  height: 40px;
+  padding: 8px 12px 8px 32px;
+}
+
+.input-address-wrapper::before {
+  content: "";
+
+  position: absolute;
+  left: 10px;
+
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  background-image: url("../img/svg/home.svg");
+}
+
+.wrapper-buttons .button {
+  position: relative;
+  padding-left: 36px;
+}
+
+.wrapper-buttons .button::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.wrapper-buttons .user-button::before {
+  background-image: url("../img/svg/user.svg");
+  background-position: 0 -5px;
+  background-repeat: no-repeat;
+}
+
+.wrapper-buttons .cart-button::before {
+  background-image: url("../img/svg/cart.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.user-button {
+  margin-right: 5px;
+
+  color: #ffffff;
+
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.main {
+  background-image: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
+	);
+	padding-bottom: 90px;
+}
+
+.promo {
+  margin-bottom: 56px;
+  padding: 68px 70px;
+
+  color: #302c34;
+
+  background: url("../img/png/promo-image.png");
+	background-position: right -140px center;
+	background-repeat: no-repeat;
+	background-color: #fff1b8;
+  border-radius: 10px;
+  box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+}
+
+.promo-title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-weight: bold;
+  font-size: 39px;
+  line-height: 46px;
+}
+
+.promo-description {
+  width: 540px;
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.cards-heading {
+  display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+  margin-bottom: 44px;
+
+  align-items: center;
+}
+
+.restaurants__cards-heading {
+	justify-content: start;
+}
+
+.cards-title {
+  margin: 0;
+
+  color: #000000;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.restaurants__cards-title {
+	margin-right: 30px;
+}
+
+.input-search {
+  height: 34px;
+	padding: 5px 12px 5px 32px;
+	min-width: 300px;
+}
+
+.input-search-wrapper {
+  position: relative;
+}
+
+.input-search-wrapper::before {
+  content: "";
+
+  position: absolute;
+  left: 10px;
+  top: 8px;
+
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  background-image: url("../img/svg/search.svg");
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 32%;
+
+  margin-bottom: 2%;
+
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+
+.card:not(:nth-child(3n)) {
+	margin-right: 2%;
+}
+
+.card-image {
+	margin-bottom: 20px;
+	height: 250px;
+	object-fit: cover;
+}
+
+.card-text {
+	padding: 0 24px 30px 24px;
+}
+
+.card-text .card-heading,
+.card-text .card-info {
+	padding: 0;
+}
+
+.card-text .card-info {
+	margin-bottom: 25px;
+}
+
+.card-buttons {
+	display: flex;
+
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+
+.card-button {
+	position: relative;
+	margin-right: 32px;
+	padding-right: 40px;
+
+	min-width: 133px;
+
+	color: #ffffff;
+	background-color: #1890FF;
+}
+
+.card-button::after{
+	content: "";
+
+	position: absolute;
+	top: 6px;
+	right: 16px;
+
+	display: block;
+
+	width: 16px;
+	height: 20px;
+
+	background-image: url("../img/svg/cart-white.svg");
+}
+
+.card-price-bold {
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+  padding: 0 24px 10px 24px;
+
+  align-items: flex-start;
+}
+
+.card-title {
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.card-title--reg {
+	font-weight: 400;
+}
+
+.card-time {
+  margin-top: 5px;
+  padding: 1px 8px;
+  min-width: 60px;
+
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 20px;
+
+  background: #262626;
+  border-radius: 2px;
+}
+
+.card-info {
+	display: flex;
+	flex-wrap: wrap;
+  margin-top: auto;
+	padding: 0 24px 35px 24px;
+	
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.restaurants__rating {
+	padding: 0;
+}
+
+.card-rating {
+  position: relative;
+
+  display: inline-block;
+  margin-right: 26px;
+  padding-left: 22px;
+
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.card-rating::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 7px;
+
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/svg/star.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.card-price {
+  position: relative;
+
+  margin-right: 10px;
+  padding-right: 15px;
+
+  color: #8c8c8c;
+}
+
+.card-price::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 13px;
+
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+
+  background-color: #8c8c8c;
+
+  border-radius: 50%;
+}
+
+.card-category {
+	width: 160px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+  color: #8c8c8c;
+}
+
+.ingredients {
+	padding: 0;
+	color: #8C8C8C;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.main-footer {
+  padding: 60px 0;
+}
+
+.main-footer .container {
+	display: flex;
+	
+	align-items: center;
+}
+
+.logo-footer {
+  margin-right: 35px;
+}
+
+.footer-link {
+	display: inline-block;
+
+  font-size: 18px;
+  line-height: 21px;
+  color: #595959;
+}
+
+.footer-link:not(:last-child) {
+	margin-right: 11px;
+}
+
+.footer-links {
+	margin-right: auto;
+}
+
+.socials-links {
+	display: flex;
+
+	align-items: center;
+}
+
+.social-link:not(:last-child) {
+	margin-right: 21px;
+}
+
+.modal {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	display: none;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.is-open {
+	display: flex;
+}
+
+.modal-dialog {
+	max-width: 780px;
+	width: 95%;
+
+	margin: auto;
+	padding: 40px 45px;
+
+	background: #FFFFFF;
+	border-radius: 5px;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 45px;
+
+	align-items: center;
+}
+
+.modal-title {
+	margin: 0;
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 42px;
+}
+
+.close {
+	width: 46px;
+	height: 46px;
+	font-size: 36px;
+	border: none;
+	background-color: transparent;
+}
+
+.modal-body {
+	margin-bottom: 53px;
+}
+
+.food-row {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 15px;
+
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.food-name {
+	margin-bottom: 8px;
+
+	font-size: 18px;
+	line-height: 32px;
+}
+
+.food-price {
+	margin-left: auto;
+	margin-right: 47px;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+.counter-button {
+	width: 39px;
+	height: 32px;
+
+	color: #40A9FF;
+	font-size: 14px;
+	line-height: 22px;
+
+	background: #FFFFFF;
+	border: 1px solid #40A9FF;
+	border-radius: 2px;
+}
+
+.counter {
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 10px;
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: space-between;
+
+	align-items: center;
+}
+
+.modal-footer__price {
+	padding: 15px 20px;
+	
+	color: #fafafa;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+
+	background: #262626;
+	border-radius: 5px;
+}
+
+@media (max-width: 1366px) {
+	.container {
+		max-width: 960px;
+	}
+
+	.promo {
+		background-position: right -200px center;
+	}
+
+	.main-footer {
+		padding: 45px 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.promo {
+		padding: 50px;
+		background-size: 450px;
+	}
+
+	.promo-title {
+		font-size: 32px;
+		line-height: 36px;
+	}
+
+	.promo-description {
+		font-size: 18px;
+		line-height: 24px;
+		width: 70%;
+	}
+
+	.cards-title {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.card-title {
+		font-size: 22px;
+		line-height: 28px;
+	}
+
+	.card-button {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 560px;
+	}
+
+	.promo {
+		padding: 40px;
+		background-size: 400px;
+		margin-bottom: 45px;
+	}
+
+	.promo-title {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.promo-description {
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	.cards-heading {
+		margin-bottom: 35px;
+	}
+
+	.cards-title {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.card {
+		max-width: 49%;
+	}
+
+	.card:not(:nth-child(3n)) {
+		margin-right: 0;
+	}
+
+	.card:nth-child(odd) {
+		margin-right: 2%;
+	}
+
+	.card-title {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.card-info {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.card-rating::before {
+		top: 3px;
+		background-size: 14px;
+	}
+
+	.card-price::after {
+		top: 9px;
+	}
+
+	.logo-footer {
+		margin-right: 68px;
+	}
+
+	.footer-links {
+		width: 40%;
+	}
+
+	.footer-link {
+		font-size: 16px;
+    line-height: 18px;
+	}
+}
+
+@media (max-width: 578px) {
+	.container {
+		width: 95%;
+	}
+
+	.main-header .container {
+		flex-wrap: wrap;
+	}
+
+	.input-address-wrapper {
+		order: 1;
+		flex-basis: 100%;
+		margin-top: 40px;
+	}
+
+	.promo {
+		padding: 30px;
+		background-image: none;
+		margin-bottom: 30px;
+	}
+
+	.promo-title {
+		line-height: 28px;
+		margin-bottom: 10px;
+	}
+
+	.promo-description {
+		width: 100%;
+	}
+
+	.cards-title {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.input-search-wrapper {
+		flex-basis: 100%;
+		margin-top: 20px;
+	}
+
+	.input-search {
+		width: 100%;
+	}
+
+	.card:nth-child(odd) {
+		margin-right: 0;
+	}
+
+	.card {
+		max-width: none;
+		flex-basis: 100%;
+		margin-bottom: 5%;
+	}
+
+	.card-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.card-info {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.card-rating::before {
+		top: 2px;
+		background-size: 15px;
+	}
+
+	.main-footer .container {
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.logo-footer {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.footer-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		width: auto;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.footer-link:not(:last-child) {
+    margin-right: 0;
+	}
+
+	.restaurants__cards-title {
+		margin-bottom: 20px;
+	}
+
+	.restaurants__rating {
+		flex-basis: 100%;
+	}
+}
+
+@media (max-width: 374px) {
+	.button-text {
+		display: none;
+	}
+
+	.wrapper-buttons .button {
+		padding-left: 0;
+	}
+
+	.wrapper-buttons .button::before {
+		position: relative;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin: 0 5px;
+	}
+}
